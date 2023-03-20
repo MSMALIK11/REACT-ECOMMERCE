@@ -97,6 +97,7 @@ const Product = ({ products, loading }) => {
     dispatch(addToCart(id));
     history.push("/");
   };
+  console.log('produt',products)
 
   return (
     <>
@@ -104,7 +105,7 @@ const Product = ({ products, loading }) => {
         return (
           <Grid item sm={12} md={4} lg={3} key={index} className={styles.box}>
             <Box className={styles.imgBox}>
-              <img src={data.image} alt={data.title} className={styles.img} />
+              <img src={data.images[0]} alt={data.title} className={styles.img} />
             </Box>
 
             {/* <Box className={styles.absol}>

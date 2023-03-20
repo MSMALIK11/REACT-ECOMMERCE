@@ -3,7 +3,7 @@ import { ADD_TO_CART, REMOVER_TO_CART } from "../aconstant/cartConstant.js";
 
 export const addToCart = (id) => async (dispatch) => {
   try {
-    const { data } = await axios.get(`https://fakestoreapi.com/products/${id}`);
+    const { data } = await axios.get(`https://dummyjson.com/products/${id}`);
     dispatch({
       type: ADD_TO_CART,
       payload: data,

@@ -225,7 +225,7 @@ const Cart = ({ match }) => {
                     <Box className={classes.flex}>
                       <Box className={classes.imgBox}>
                         {" "}
-                        <img src={items.image} className={classes.img} />
+                        <img src={items?.images[0]} className={classes.img} />
                       </Box>
                       <Box className={classes.innerFlex}>
                         <Typography className={classes.title}>

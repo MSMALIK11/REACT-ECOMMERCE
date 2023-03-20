@@ -149,6 +149,7 @@ const SingleProduct = ({ match }) => {
     history.push("/cart/item");
   };
 
+  console.log('sproduct0',sproduct)
   return (
     <>
       {loading ? (
@@ -162,7 +163,7 @@ const SingleProduct = ({ match }) => {
                   <FavoriteIcon color="disabled" style={{ fontSize: 35 }} />
                 </Icon>
               </Box>
-              <img src={sproduct.image} className={style.pimg} />
+              <img src={sproduct?.thumbnail} className={style.pimg} />
 
               <Box className={style.button}>
                 <Button

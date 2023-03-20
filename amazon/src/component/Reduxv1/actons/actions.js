@@ -1,35 +1,4 @@
-// import { ALL_PRODUCT_REQUEST,ALL_PRODUCT_SUCCESS,ALL_PRODUCT_FAIL } from "../aconstant/constant.js";
-// import axios  from 'axios';
-// export const getAllProduct=async(dispatch)=>{
-//     try {
-//         dispatch({
-//             type:ALL_PRODUCT_REQUEST
-//         });
 
-//         const {data}= await axios.get('https://fakestoreapi.com/products')
-// console.log(data)
-
-// dispatch({
-//     type:ALL_PRODUCT_SUCCESS,
-//     payload:data,
-
-// })
-
-//     } catch (error) {
-// dispatch({
-//     type:ALL_PRODUCT_FAIL,
-//     payload:error.responsive.message
-// });
-
-//      }
-
-// }
-
-// // export const  clearErrors=()=>{
-// //     dispatch({
-// //         type:CLEAR_ERRORS
-// //     })
-// // }
 
 import {
   ALL_PRODUCT_REQUEST,
@@ -46,11 +15,11 @@ export const getAllProduct = async (dispatch) => {
     dispatch({
       type: ALL_PRODUCT_REQUEST,
     });
-    const { data } = await axios.get("https://fakestoreapi.com/products");
+    const { data } = await axios.get("https://dummyjson.com/products");
 
     dispatch({
       type: ALL_PRODUCT_SUCCESS,
-      payload: data,
+      payload: data.products,
     });
   } catch (error) {
     // dispatch({
@@ -66,7 +35,7 @@ export const getSingleProduct = (id) => async (dispatch) => {
     dispatch({
       type: PRODUCT_DETAILS_REQUEST,
     });
-    const { data } = await axios.get(`https://fakestoreapi.com/products/${id}`);
+    const { data } = await axios.get(`https://dummyjson.com/products/${id}`);
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
